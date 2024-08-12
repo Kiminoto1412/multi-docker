@@ -8,6 +8,7 @@ before_install:
 script:
   - docker run -e CI=true kiminoto1412/react-test npm test
 
+
 after_success: 
   - docker build -t kiminoto1412/multi-client ./client
   - docker build -t kiminoto1412/multi-nginx ./nginx
