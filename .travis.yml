@@ -16,7 +16,7 @@ after_success:
   # Login into docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stding
   # Take those image and push to docker hub
-  - docker push kiminoto1412/multi-client 
-  - docker push kiminoto1412/multi-nginx 
-  - docker push kiminoto1412/multi-server 
-  - docker push kiminoto1412/multi-worker 
+  - docker push snexcolly123/multi-client 
+  - docker push snexcolly123/multi-nginx 
+  - docker push snexcolly123/multi-server 
+  - docker push snexcolly123/multi-worker 
