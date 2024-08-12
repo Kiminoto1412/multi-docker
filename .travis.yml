@@ -13,3 +13,10 @@ after_success:
   - docker build -t kiminoto1412/multi-nginx ./nginx
   - docker build -t kiminoto1412/multi-server ./server
   - docker build -t kiminoto1412/multi-worker ./worker
+  # Login into docker CLI
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stding
+  # Take those image and push to docker hub
+  - docker push kiminoto1412/multi-client 
+  - docker push kiminoto1412/multi-nginx 
+  - docker push kiminoto1412/multi-server 
+  - docker push kiminoto1412/multi-worker 
